@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { motion } from "framer-motion";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+    <div className="main">
+      <motion.div
+        className="intro"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.5, ease: [0, 0.71, 0.2, 1.01] }}
+      >
+        <img src="./images/tit.png"></img>
+        <img className="mice" src="./images/mice.png"></img>
+      </motion.div>
+
+      <motion.div
+        className="btn"
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 1.0, ease: [0, 0.71, 0.2, 1.01] }}
+      >
+        <a href="#;">
+          <img src="./images/btn_howto.png"></img>
         </a>
-      </header>
+
+        <a href="#;">
+          <img src="./images/btn_start.png"></img>
+        </a>
+      </motion.div>
     </div>
   );
 }
