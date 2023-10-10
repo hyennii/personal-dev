@@ -28,6 +28,8 @@ function App() {
           <img src="./images/btn_start.png"></img>
         </a>
       </motion.div>
+
+      <img class="subway" src="./images/subway.jpg"></img>
     </div>
   );
 }

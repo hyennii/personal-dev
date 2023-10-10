@@ -1,5 +1,6 @@
 .main {
   text-align: center;
+  position: relative;
 }
 .main .intro img:first-of-type {
   display: block;
@@ -11,4 +12,24 @@
 }
 .btn a:hover img {
   transform: scale(1.1);
+}
+.subway {
+  animation: slide-out-right 1.2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -150px;
+  z-index: -9;
+}
+@keyframes slide-out-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
 }
